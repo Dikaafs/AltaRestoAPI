@@ -25,15 +25,15 @@ public class CreateNewMenu {
     public void sendRequestCreateNewMenuValidInput() {
         String token = GenerateToken.generateToken();
 
-        File imageMenu = new File("src/test/resources/kwetiau.jpeg");
+        File imageMenu = new File("src/test/resources/bihun.jpeg");
 
         SerenityRest.given()
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.MULTIPART)
                 .multiPart("image", imageMenu)
-                .multiPart("name", "kwetiau")
+                .multiPart("name", "bihun")
                 .multiPart("categoryid", 1)
-                .multiPart("description", "kwetiau dengan rasa khas")
+                .multiPart("description", "makan bihun biar mulus")
                 .multiPart("price", 20000)
                 .post(setApiEndpointForCreateNewMenuValidInput());
     }
