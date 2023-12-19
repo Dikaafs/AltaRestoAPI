@@ -16,7 +16,7 @@ public class DeleteAccValidId {
 
     @Step("i set API endpoint for delete account with valid id")
     public String setApiEndpointDeleteAccValidId(){
-        return url+"admin/delete/11";
+        return url+"admin/delete/10";
     }
 
     @Step("i send request to delete account with valid id")
