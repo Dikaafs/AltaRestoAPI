@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+    "Welcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "response": {
+          "$ref": "#/definitions/Response"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Result"
+          }
+        }
+      },
+      "required": [
+        "response",
+        "results"
+      ],
+      "title": "Welcome"
+    },
+    "Response": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "message",
+        "success"
+      ],
+      "title": "Response"
+    },
+    "Result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ID": {
+          "type": "integer"
+        },
+        "Username": {
+          "type": "string"
+        },
+        "Email": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        },
+        "CreateAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "UpdateAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "DeleteAt": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "CreateAt",
+        "DeleteAt",
+        "Email",
+        "ID",
+        "Password",
+        "UpdateAt",
+        "Username"
+      ],
+      "title": "Result"
+    }
+  }
+}

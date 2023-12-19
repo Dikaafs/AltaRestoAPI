@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+    "Welcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "response": {
+          "$ref": "#/definitions/Response"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Result"
+          }
+        }
+      },
+      "required": [
+        "response",
+        "results"
+      ],
+      "title": "Welcome"
+    },
+    "Response": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "message",
+        "success"
+      ],
+      "title": "Response"
+    },
+    "Result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "order_items": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/OrderItem"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "totalPrice": {
+          "type": "integer"
+        },
+        "status": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "id",
+        "order_items",
+        "status",
+        "totalPrice"
+      ],
+      "title": "Result"
+    },
+    "OrderItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "menuId": {
+          "type": "integer"
+        },
+        "quantity": {
+          "type": "integer"
+        },
+        "subTotal": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "menuId",
+        "quantity",
+        "subTotal"
+      ],
+      "title": "OrderItem"
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "Sent",
+        "Accepted"
+      ],
+      "title": "Status"
+    }
+  }
+}
