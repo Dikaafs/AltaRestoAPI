@@ -31,9 +31,9 @@ public class CreateNewMenu {
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.MULTIPART)
                 .multiPart("image", imageMenu)
-                .multiPart("name", "bihun")
+                .multiPart("name", "bihun komplit")
                 .multiPart("categoryid", 1)
-                .multiPart("description", "makan bihun biar mulus")
+                .multiPart("description", "bihun komplit")
                 .multiPart("price", 20000)
                 .post(setApiEndpointForCreateNewMenuValidInput());
     }
