@@ -12,9 +12,6 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>3.6.12</serenity.version>
         <serenity.maven.version>3.5.1</serenity.maven.version>
         <serenity.jbehave.version>1.46.0</serenity.jbehave.version>
