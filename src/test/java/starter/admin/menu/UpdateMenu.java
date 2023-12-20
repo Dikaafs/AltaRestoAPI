@@ -19,7 +19,7 @@ public class UpdateMenu {
 
     @Step("i set API endpoint for update menu")
     public String setAPIendpointUpdateMenu(){
-        return url+"admin/update/menu/1";
+        return url+"admin/update/menu/23";
     }
 
     @Step("i send request to update menu with valid input")
@@ -32,7 +32,7 @@ public class UpdateMenu {
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.MULTIPART)
                 .multiPart("image",imageMenu)
-                .multiPart("id", 1)
+                .multiPart("id", 23)
                 .multiPart("name", "Tropical Mocktail")
                 .multiPart("categoryid", 5)
                 .multiPart("description", "Menyegarkan")
@@ -45,7 +45,7 @@ public class UpdateMenu {
     public void receiveValidDataUpdatedMenu(){
         JsonSchemaHelper helper = new JsonSchemaHelper();
         String schema = helper.getResponseSchema(JsonSchemaAdmin.UpdateMenu_Response_Schema);
-        restAssuredThat(response -> response.body("'results'.'id'",equalTo(1)));
+        restAssuredThat(response -> response.body("'results'.'id'",equalTo(23)));
         restAssuredThat(response -> response.body("'results'.'image'", notNullValue()));
         restAssuredThat(response -> response.body("'results'.'name'",equalTo("Tropical Mocktail")));
         restAssuredThat(response -> response.body("'results'.'categoryid'",equalTo(5)));
