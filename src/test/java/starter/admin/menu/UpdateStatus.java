@@ -16,7 +16,7 @@ public class UpdateStatus {
 
     @Step("i set API endpoint for update menu")
     public String setAPIendpointUpdateStatusValidMenuId(){
-        return url+"admin/status/1";
+        return url+"admin/status/23";
     }
 
     @Step("i send request to update menu with valid input")
@@ -34,7 +34,7 @@ public class UpdateStatus {
     public void statusUpdated() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
         String schema = helper.getResponseSchema(JsonSchemaAdmin.UpdateStatus_Response_Schema);
-        restAssuredThat(response -> response.body("'results'.'id'", equalTo(1)));
+        restAssuredThat(response -> response.body("'results'.'id'", equalTo(23)));
         restAssuredThat(response -> response.body("'results'.'image'", notNullValue()));
         restAssuredThat(response -> response.body("'results'.'name'", equalTo("Tropical Mocktail")));
         restAssuredThat(response -> response.body("'results'.'categoryid'", equalTo(5)));
