@@ -16,4 +16,7 @@ public class JsonSchemaAdmin {
     public static final String UpdateStatus_Response_Schema = "schema/Admin/UpdateStatusSchema.json";
     public static final String UpdateOrderStatus_Response_Schema = "schema/Admin/UpdateOrderStatusSchema.json";
     public static final String BadRequest_Response_Schema = "schema/Admin/BadRequestSchema.json";
+    public static final String AdminGetAllOrder_Response_Schema = "schema/Admin/AdminGetAllOrderSchema.json";
+    public static final String AdminGetOrderById_Response_Schema = "schema/Admin/AdminGetOrderByIdSchema.json";
+
 }
