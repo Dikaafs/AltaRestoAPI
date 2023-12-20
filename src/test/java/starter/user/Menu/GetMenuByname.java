@@ -2,9 +2,7 @@ package starter.user.Menu;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
-import starter.utils.Admin.GenerateToken;
-import starter.utils.Admin.JsonSchemaAdmin;
-import starter.utils.Admin.JsonSchemaHelper;
+
 import starter.utils.User.GenerateTokenUser;
 import starter.utils.User.JsonSchemaHelperUser;
 import starter.utils.User.JsonSchemaUser;
